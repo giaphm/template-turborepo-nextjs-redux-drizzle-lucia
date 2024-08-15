@@ -1,8 +1,12 @@
-import Image from "next/image";
-import { Button } from "@repo/ui/button";
-import styles from "./page.module.css";
+import Image from 'next/image'
+import { Button } from '@repo/ui/button'
+import styles from './page.module.css'
+import { db, users } from '@repo/drizzle'
 
-export default function Home() {
+export default async function Home() {
+  const data = await db.select().from(users)
+  console.log('data', data)
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -95,5 +99,5 @@ export default function Home() {
         </a>
       </footer>
     </div>
-  );
+  )
 }

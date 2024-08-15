@@ -79,6 +79,9 @@ importers:
         specifier: 19.0.0-rc-f994737d14-20240522
         version: 19.0.0-rc-f994737d14-20240522(react@19.0.0-rc-f994737d14-20240522)
     devDependencies:
+      '@repo/drizzle':
+        specifier: workspace:*
+        version: link:../../packages/drizzle
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
