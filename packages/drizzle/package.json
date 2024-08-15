@@ -1,0 +1,29 @@
+{
+  "name": "@repo/drizzle",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "db:seed": "pnpx tsx scripts/seed.ts",
+    "db:migrate": "pnpx tsx scripts/migrate.ts",
+    "db:studio": "drizzle-kit studio",
+    "db:generate": "drizzle-kit generate",
+    "type-check": "tsc --noEmit"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "drizzle-kit": "^0.24.0",
+    "eslint": "8.56.0",
+    "typescript": "latest"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.33.0",
+    "env-var": "^7.5.0",
+    "postgres": "^3.4.4"
+  }
+}

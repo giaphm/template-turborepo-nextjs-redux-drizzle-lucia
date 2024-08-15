@@ -5,9 +5,15 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky",
+    "type-check": "turbo run type-check",
+    "dev:docs": "turbo run dev --filter=docs",
+    "dev:web": "turbo run dev --filter=web"
   },
   "devDependencies": {
+    "husky": "^9.1.4",
+    "lint-staged": "^15.2.9",
     "prettier": "^3.2.5",
     "turbo": "^2.0.13",
     "typescript": "^5.4.5"
